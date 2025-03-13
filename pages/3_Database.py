@@ -62,7 +62,7 @@ de consumidores, observar que o tempo de resolução possui uma correlação neg
 sugere que tempos de resolução mais longos estão associados a respostas fora do prazo. Além disso, uma correlação positiva 
 entre o tempo de resolução e a variável “Reclamação contestada pelo consumidor” indica que tempos de resolução mais extensos 
 podem aumentar a probabilidade de contestação por parte do consumidor. Essas correlações destacam a importância de tempos de 
-rápidos para melhorar a satisfação do cliente e a conformidade com os prazos estabelecidos """)
+rápidos para melhorar a satisfação do cliente e a conformidade com os prazos estabelecidos. """)
 
 ## **3. Aplicação de Distribuições Probabilísticas**
 st.header("3️⃣ Aplicação de Distribuições Probabilísticas")
