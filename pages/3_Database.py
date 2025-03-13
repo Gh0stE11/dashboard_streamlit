@@ -55,6 +55,14 @@ numeric_cols = df.select_dtypes(include=["number"]).columns
 correlation_matrix = df[numeric_cols].corr()
 fig_corr = px.imshow(correlation_matrix, text_auto=True, title="Matriz de Correlação")
 st.plotly_chart(fig_corr)
+st.write("""A matriz de correlação revela a intensidade e a direção das relações lineares entre variáveis numéricas,
+com coeficientes variando de -1 a 1. Valores próximos de 1 ou -1 indicam correlações fortes, positivas ou negativas, 
+respectivamente, enquanto valores próximos de 0 sugerem pouca ou nenhuma correlação linear. Na análise das reclamações
+de consumidores, observar que o tempo de resolução possui uma correlação negativa com a variável “Resposta em tempo hábil” 
+sugere que tempos de resolução mais longos estão associados a respostas fora do prazo. Além disso, uma correlação positiva 
+entre o tempo de resolução e a variável “Reclamação contestada pelo consumidor” indica que tempos de resolução mais extensos 
+podem aumentar a probabilidade de contestação por parte do consumidor. Essas correlações destacam a importância de tempos de 
+rápidos para melhorar a satisfação do cliente e a conformidade com os prazos estabelecidos """)
 
 ## **3. Aplicação de Distribuições Probabilísticas**
 st.header("3️⃣ Aplicação de Distribuições Probabilísticas")
@@ -98,7 +106,13 @@ ax.set_ylabel("Probabilidade")
 st.pyplot(fig)
 st.write(f"""
 A média de reclamações por dia é de **{lambda_poisson:.2f}**. Isso sugere que o número de reclamações pode ser modelado
-com uma distribuição de Poisson, útil para prever a frequência de novas reclamações em períodos futuros.
+com uma distribuição de Poisson, útil para prever a frequência de novas reclamações em períodos futuros. A distribuição 
+obtida mostra que a maioria dos dias apresenta um volume de reclamações próximo à média, com variações ocasionais que 
+podem estar associadas a fatores externos, como sazonalidade ou eventos específicos. Observa-se uma assimetria na 
+distribuição, indicando a ocorrência de dias atípicos com um número significativamente maior de reclamações. Esses picos 
+sugerem a necessidade de estratégias operacionais para lidar com períodos de alta demanda, garantindo maior eficiência no
+atendimento. Além disso, a modelagem permite estimar a probabilidade de diferentes volumes de reclamações, auxiliando no 
+planejamento e na alocação de recursos.
 """)
 
 
